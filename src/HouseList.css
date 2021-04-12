@@ -20,11 +20,15 @@
 
 .display-options-form {
     width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .display-options-element {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2%;
+    margin: 2% 6%;
 }
