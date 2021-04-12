@@ -1,0 +1,29 @@
+.house-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+
+}
+
+.house-detail-upper, .house-realtor-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;   
+}
+
+.house-detail-about {
+    width: 80%;
+    margin: 5%;
+}
+
+.house-detail-element {
+    width: 25%;
+    border: 1px solid black;
+    padding: 2%;
+    margin: 2%;
+}

@@ -1,0 +1,31 @@
+.house-card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.house-card-container:hover {
+    box-shadow: 0 0 8px rgb(151, 150, 150);
+}
+
+.house-card-element {
+    margin: 1%;
+    padding: 2%;
+    border: 1px solid black;
+    width: 15%;
+}
+
+.house-card-element-image {
+    margin: 2%;
+    padding: 2%;
+    border: 1px solid black;
+    width: 20%;
+}
+
+.house-image {
+    width: 100%;
+}
