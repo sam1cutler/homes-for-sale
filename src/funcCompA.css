@@ -1,0 +1,17 @@
+.func-comp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+    padding: 5%;
+    border: 1px solid black;
+}
+
+.movie-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2%;
+    padding: 2%;
+    border: 1px solid black;
+}
