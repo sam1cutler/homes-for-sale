@@ -1,33 +1,32 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './stopwatch.css';
 
 
 function Stopwatch() {
 
-    console.log('something');
+    console.log('Component loaded');
 
     const [ isTicking, setIsTicking ] = useState( false );
     const [ time, setTime ] = useState( 0 );
+    const theTicker = useRef(null);
 
-    setInterval( () => {
-        if (isTicking === true) {
-            setTime( (time) => time + 1);
-        }
-    },  
-        1000
-    )
-    
     function handleStart() {
+
+        console.log('start')
 
         setIsTicking(true);
 
-        
+        theTicker.current = setInterval( () => {
+            setTime( (time) => time+1 )
+        }, 1000);
 
     }
 
     function handlePause() {
 
         setIsTicking(false);
+
+        clearInterval(theTicker.current);
 
     }
 
@@ -49,7 +48,7 @@ function Stopwatch() {
 
     return (
         <div className='stopwatch-container'>
-            <h2>STOPWATCH</h2>
+            <h2>STOPWATCH 1</h2>
             <div className='stopwatch-element'>
                 <div>
                     {time}
@@ -59,13 +58,15 @@ function Stopwatch() {
                 </div>
             </div>
             <div className='stopwatch-element'>
-                <button onClick={ () => handleStart }>
-                    Start
-                </button>
-                <button onClick={ () => handlePause }>
-                    Stop
-                </button>
-                <button onClick={ () => handleReset }>
+                { !isTicking
+                    ? <button onClick={ handleStart }>
+                        Start
+                    </button>
+                    : <button onClick={ handlePause }>
+                        Pause
+                    </button>
+                }
+                <button onClick={ handleReset }>
                     Reset
                 </button>
             </div>

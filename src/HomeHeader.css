@@ -10,6 +10,13 @@
 }
 
 .header-link {
-    margin: 15px;
-    
+    margin: 15px;   
+}
+
+.header-link:hover {
+    text-shadow: 0 0 6px grey;
+}
+
+.active {
+    text-shadow: 0 0 6px skyblue;
 }

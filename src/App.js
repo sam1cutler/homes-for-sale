@@ -12,6 +12,7 @@ import FuncCompA from './funcCompA';
 import FuncCompB from './funcCompB';
 import FuncCompC from './funcCompC';
 import Stopwatch from './stopwatch';
+import Stopwatch2 from './stopwatch2';
 
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
 
     return (
       <>
-        {['/','/A','/B','/C','/stopwatch'].map( path => (
+        {['/','/A','/B','/C','/stopwatch','/stopwatch2'].map( path => (
           <Route
             exact
             key={path} 
@@ -66,7 +67,10 @@ class App extends Component {
           path='/stopwatch'
           component={Stopwatch}
         />
-        
+        <Route 
+          path='/stopwatch2'
+          component={Stopwatch2}
+        />
       </>
     )
   }

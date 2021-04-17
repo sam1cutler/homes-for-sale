@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './HomeHeader.css';
 
 class HomeHeader extends Component {
@@ -10,30 +10,36 @@ class HomeHeader extends Component {
             <div className='home-header-container'>
                 <h1>Homes for Sale!</h1>
                 <div className='links-container'>
-                    <Link
+                    <NavLink
                         className='header-link'
                         to='/A'
                     >
                         A
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         className='header-link'
                         to='/B'
                     >
                         B
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         className='header-link'
                         to='/C'
                     >
                         C
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         to='/stopwatch'
                         className='header-link'
                     >
                         Stopwatch
-                    </Link>
+                    </NavLink>
+                    <NavLink
+                        to='/stopwatch2'
+                        className='header-link'
+                    >
+                        Stopwatch2
+                    </NavLink>
                 </div>
                 
             </div>
